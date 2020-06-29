@@ -1,0 +1,3 @@
+Viết hàm auto tách code dễ sinh lỗi
+check xem có thể snapshot renderer
+check xem có cả main và renderer có chung không -> Cùng dùng chung snapshot nhưng không share chung bộ nhớ của snapshot mà chạy thành 2 binary khác nhau.

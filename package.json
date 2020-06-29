@@ -1,0 +1,44 @@
+{
+  "name": "electron.js-playground",
+  "version": "1.0.0",
+  "description": "Playground for testing electron.js",
+  "scripts": {
+    "backup_blob": "node backup_blob.js",
+    "restore_blob": "node restore_blob.js",
+    "generate_snapshot_sample": "node snapshot_generator.js has-link ./sample startup.js",
+    "start_sample": "electron ./sample/app.js --prof-process",
+    "generate_snapshot_fixed_value": "node snapshot_generator.js no-link ./fixed_value",
+    "start_fixed_value": "electron ./fixed_value/app.js",
+    "generate_snapshot_global_error": "node snapshot_generator.js no-link ./global_error",
+    "generate_snapshot_resolve_global_error": "node snapshot_generator.js has-link ./resolve_global_error startup.js",
+    "start_snapshot_resolve_global_error": "electron ./resolve_global_error/app.js",
+    "generate_snapshot_no_fixed_value": "node snapshot_generator.js has-link ./resolved_fixed_value startup.js",
+    "start_no_fixed_value": "electron ./resolved_fixed_value/app.js",
+    "generate_snapshot_vanila": "node snapshot_generator.js no-link ./benchmark/vanila_JS/snapshot",
+    "start_snapshot_vanila": "electron ./benchmark/vanila_JS/snapshot/app.js",
+    "start_no_snapshot_vanila": "electron ./benchmark/vanila_JS/no_snapshot/app.js",
+    "generate_snapshot_stress": "node snapshot_generator.js no-link ./benchmark/stress/snapshot",
+    "start_snapshot_stress": "electron ./benchmark/stress/snapshot/app.js",
+    "start_no_snapshot_stress": "electron ./benchmark/stress/no_snapshot/app.js",
+    "generate_snapshot_test_electron": "node snapshot_generator.js no-link ./electron/snapshot",
+    "start_test_electron_snapshot": "electron ./electron/snapshot/app.js",
+    "start_test_electron_no_snapshot": "electron ./electron/no_snapshot/app.js"
+  },
+  "author": "Hua Anh Minh",
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-link": "^0.4.2",
+    "electron-mksnapshot": "^8.0.0",
+    "electron-packager": "^15.0.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "moment": "^2.24.0",
+    "react": "^16.13.1"
+  },
+  "standard": {
+    "globals": [
+      "snapshotResult"
+    ]
+  }
+}
